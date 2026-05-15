@@ -14,7 +14,11 @@ This project is a Machine Learning-based Customer Churn Prediction System develo
 * Provide an easy-to-use interactive dashboard using Streamlit.
 
 ---
+## Live Demo
 
+[Open Streamlit App](https://churntele.streamlit.app/)
+
+----
 # Technologies Used
 
 * Python
