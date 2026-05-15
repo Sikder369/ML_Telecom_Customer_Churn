@@ -366,35 +366,35 @@ elif page == "EDA📊":
 # CHURN PERCENTAGE CHART
 # ==============================
 
-st.markdown("""
-<div class="section-heading">
-Customer Churn Percentage
-</div>
-""", unsafe_allow_html=True)
+    st.markdown("""
+    <div class="section-heading">
+    Customer Churn Percentage
+    </div>
+    """, unsafe_allow_html=True)
 
 # Calculate percentages
-churn_percent = df["Churn"].value_counts(normalize=True) * 100
+    churn_percent = df["Churn"].value_counts(normalize=True) * 100
 
 # Rename labels
-labels = ["Stayed", "Churned"]
+    labels = ["Stayed", "Churned"]
 
 # Create figure
-fig_pie, ax_pie = plt.subplots(figsize=(5,5))
+    fig_pie, ax_pie = plt.subplots(figsize=(5,5))
 
-colors = ["#4CAF50", "#FF5252"]
+    colors = ["#4CAF50", "#FF5252"]
 
-ax_pie.pie(
-    churn_percent,
-    labels=labels,
-    autopct="%1.1f%%",
-    startangle=90,
-    colors=colors,
-    textprops={"fontsize": 12}
-)
+    ax_pie.pie(
+        churn_percent,
+        labels=labels,
+        autopct="%1.1f%%",
+        startangle=90,
+        colors=colors,
+        textprops={"fontsize": 12}
+    )
 
-ax_pie.set_title("Customer Churn Distribution")
+    ax_pie.set_title("Customer Churn Distribution")
 
-st.pyplot(fig_pie)
+    st.pyplot(fig_pie)
 
 # PAGE 3: ACCURACY
 # ==============================>>>>>
